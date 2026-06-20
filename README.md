@@ -15,18 +15,17 @@ Lightweight: Minimal resource usage (~70 MB RAM).
 
 # Installation
 For Advanced Users (Core / Docker / VM)
-Install dependencies: pip install env_canada paho-mqtt
-
-Configure your config.json with your coordinates.
-
-Create the meteo_canada.service file as shown below.
+- Install dependencies: pip install env_canada paho-mqtt
+- Configure your the python routine  with your coordinates and MQTT .
+- Create the meteo_canada.service file as shown below.
+- add the mqqt.yaml sensors as presented 
 
 For Home Assistant Supervised / OS Users
 You can still use this solution:
 
-Remote Deployment: Install the script on a separate device (Raspberry Pi, secondary server) on your local network. Since it communicates via MQTT, it will push data to your Home Assistant instance seamlessly.
+use Remote Deployment: Install the script on a separate device (Raspberry Pi, secondary server) on your local network. Since it communicates via MQTT, it will push data to your Home Assistant instance seamlessly.
 
 # Files:
 - prevision_canada.py: The main collection script.
 - requirements.txt: Necessary Python dependencies.
-- config.json.example: Template for your Homeasssistant mqtt settings.
+- config example: Template for your Homeasssistant mqtt.yaml settings.
