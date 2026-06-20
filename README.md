@@ -17,8 +17,8 @@ Lightweight: Minimal resource usage (~70 MB RAM).
 For Advanced Users (Core / Docker / VM)
 - Install dependencies: pip install env_canada paho-mqtt
 - Configure your the python routine  with your coordinates and MQTT .
-- Create the meteo_canada.service file as shown below.
-- add the mqqt.yaml sensors as presented 
+- Create the meteo_canada.service see servide file. 
+- add the mqqt.yaml sensors as presented . 
 
 For Home Assistant Supervised / OS Users
 You can still use this solution:
