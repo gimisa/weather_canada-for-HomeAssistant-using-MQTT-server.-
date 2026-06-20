@@ -1,0 +1,14 @@
+# sudo nano /etc/systemd/system/meteo_canada.service
+[Unit]
+Description=HomeAssistant Weather Canada
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/prevision_canada.py
+Restart=always
+User=your_user
+
+[Install]
+WantedBy=multi-user.target
+
+# then start it with Create /etc/systemd/system/meteo_canada.service:
