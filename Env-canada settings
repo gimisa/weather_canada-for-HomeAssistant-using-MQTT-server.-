@@ -1,0 +1,33 @@
+# Prérequis
+- broker MQTT (ex: Mosquitto)
+- Python 3 
+> pip install env_canada paho-mqtt
+
+# download 
+- previson-canada.py and modify with your mqtt cridentials. 
+
+# Homeassistant 
+- exemple in configuration.yaml
+- mqtt: !include mqtt.yaml
+- in mqtt.yaml: 
+sensor:
+  - name: "Météo Granby Température"
+    state_topic: "gimisa/meteo/granby"
+    value_template: "{{ value_json.temperature }}"
+    unit_of_measurement: "°C"
+    device_class: temperature
+    unique_id: meteo_granby_temp
+  - name: "Météo Granby Condition"
+    state_topic: "gimisa/meteo/granby"
+    value_template: "{{ value_json.condition }}"
+    unique_id: meteo_granby_condition
+  - name: "Météo Granby Humidité"
+    state_topic: "gimisa/meteo/granby"
+    value_template: "{{ value_json.humidite }}"
+    unit_of_measurement: "%"
+    device_class: humidity
+    unique_id: meteo_granby_hum
+  - name: "Météo Granby Alerte"
+    state_topic: "gimisa/meteo/granby"
+    value_template: "{{ value_json.alerte_active }}"
+    unique_id: meteo_granby_alerte
